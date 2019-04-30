@@ -1,10 +1,17 @@
 // 1. The function, `takeANumber`, should accept two paramaters: the current line of people, along with the new person's name. The function should return a welcome message including the new person's position in line, such as `"Welcome, Ada. You are number 1 in line."`. 
 
-function takeANumber(lineUp, name){
-  lineUp.push(name);
-  return `Welcome, ${name}. You are number ${lineUp.length} in line.`;
-}
+// function takeANumber(lineUp, name){
+//   lineUp.push(name);
+//   return `Welcome, ${name}. You are number ${lineUp.length} in line.`;
+// }
 
+var count = 0;
+
+function takeANumber(lineUp) {
+  count++;
+  lineUp.push(count);
+  return count;
+}
 
 // 2. Build a function `nowServing`. This function should accept the current line of people (`katzDeliLine`) and return the first person in line and then remove that individual from the line. If there is nobody in line, it should return "There is nobody waiting to be served!"
 
